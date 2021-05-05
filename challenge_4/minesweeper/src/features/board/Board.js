@@ -30,13 +30,13 @@ export function Board() {
   return (
     <div>
       <div className={styles.settings}>
-      <label>Board Height</label>
+      <label>Board Height: {useSelector(state => state.board.x)}</label>
       <input type="range" defaultValue="10"max="25" min="5" onChange={(e)=>dispatch(changeX(e.target.value))}></input>
-      <label>Board Width</label>
+      <label>Board Width: {useSelector(state => state.board.y)}</label>
       <input type="range" defaultValue="10" max="25" min="5"onChange={(e)=>dispatch(changeY(e.target.value))}></input>
-      <label>Mines</label>
+      <label>Mines: {useSelector(state => state.board.mines)}</label>
       <input type="range" defaultValue="10" max="50" min="5"onChange={(e)=>dispatch(changeMines(e.target.value))}></input>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+      <button className={styles.button} onClick={() => dispatch(reset())}>{lost ? '😳': '😎'}</button>
       </div>
       <table>
         <tbody>

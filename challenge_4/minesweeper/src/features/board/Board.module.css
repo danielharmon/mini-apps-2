@@ -18,5 +18,7 @@ td {
 .settings {
   display: flex;
   flex-direction: column;
-
+}
+.button {
+  font-size: 100px;
 }
