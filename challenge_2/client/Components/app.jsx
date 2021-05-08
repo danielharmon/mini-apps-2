@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate:"2021-04-02",
+      startDate:"2021-01-01",
       endDate:"2021-04-10",
       data: {
         datasets: [{
